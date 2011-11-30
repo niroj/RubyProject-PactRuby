@@ -10,15 +10,12 @@ class Trainee < Employee
 		self.platform = platform
 	end
 	
-	def display_all
-		super
-		puts "Trainee Platform: #{self.platform}"
+	def to_string
+		super + "\n" + "Trainee Platform: #{self.platform}"
 	end
 
 end
 
-pratuat = Trainee.new("pratuat", "Ruby on Rails")
-pratuat.display_all
 
 
 		

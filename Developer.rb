@@ -2,20 +2,26 @@ require 'C:\Users\User\Desktop\RubyProject\Employee.rb'
 
 class Developer < Employee
 
-	attr_accessor :project
-	
 	def initialize(name,project)
 		super(name)
-		self.project = project
+		@projects = []
+		@projects << project
 	end
 	
-	def display_all
-		super
-		puts self.project
+	def to_string
+		string = "\nProjects| "
+		string = "\nProjects| "
+		@projects.each {|proj| string += "\n\t|-> " + proj}
+		super + string
+	end
+	
+	def add_project(project)
+		@projects << project
 	end
 	
 end
 
 pratuat = Developer.new("pratuat","Blackberry BizcardArmy")
-puts pratuat.display_all
+pratuat.add_project("School Calendar")
+puts pratuat.to_string
 		

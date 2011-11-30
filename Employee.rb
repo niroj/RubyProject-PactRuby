@@ -7,8 +7,8 @@ class Employee
 		self.name = name;
 	end
 	
-	def display_all
-		puts "Employee Name: #{self.name}"
+	def to_string
+		"Employee Name: #{self.name}"
 	end
 
 end
