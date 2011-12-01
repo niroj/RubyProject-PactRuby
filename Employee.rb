@@ -5,13 +5,12 @@ class Employee
 	attr_reader :name
 	
 	def initialize(name)
-		@name = name 
+		@name = name
 	end
-	
-	def company
-	  @company.name 
-	 end
-
 end   
 
-e=Employee.new("e")
+employee = Employee.new("Jimmy")
+puts employee.name
+puts employee.position
+puts employee.company
+puts employee.name

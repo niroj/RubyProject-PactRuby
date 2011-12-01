@@ -1,11 +1,12 @@
-require 'Employee.rb'
+require 'C:\Users\User\Desktop\RubyProject\Employee.rb'
 
 class Trainee < Employee
 
-	attr_reader :name
+	attr_reader :platform
 	 
-	def initialize(name)
-		super(name) 
+	def initialize(name,platform)
+		super(name)
+		@platform = platform
 		self.position = "trainee"
 	end
 

@@ -1,6 +1,6 @@
-require 'Employee'
-require 'Developer'
-require 'Trainee'
+require 'C:\Users\User\Desktop\RubyProject\Employee'
+require 'C:\Users\User\Desktop\RubyProject\Developer'
+require 'C:\Users\User\Desktop\RubyProject\Trainee'
 
 class Company
   
@@ -46,8 +46,8 @@ end
 
 pratuat = Developer.new("pratuat","Bizcard Army", "PactRuby")
 niroj = Developer.new("niroj","Bizcard Army","Surehire","CloudFactory", "PactRuby")  
-ashish = Trainee.new("ashish")
-shrey = Trainee.new("shrey")
+ashish = Trainee.new("ashish","Ruby on Rails")
+shrey = Trainee.new("shrey","iOS")
                                                            
 sprout = Company.new("Sprout Technologies")
 
@@ -56,14 +56,14 @@ sprout << pratuat
 sprout << ashish
 sprout << shrey
 
-puts sprout.trainees
+puts "----------------"
 puts sprout.developers
- 
+puts "----------------"
+puts sprout.trainees
+puts "----------------"
 puts sprout.list_employees
-puts sprout.name
-puts "\n"
-puts niroj.projects 
-puts "\n" 
-puts pratuat.projects 
+puts "----------------"
+puts pratuat.company
+puts "----------------"
 
-puts pratuat.company  
+
