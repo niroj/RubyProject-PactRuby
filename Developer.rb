@@ -1,24 +1,29 @@
 require 'Employee.rb'
 
-class Developer < Employee
+class Developer < Employee 
+  
+  attr_reader :projects
 
-	def initialize(name,project)
-		super(name)
-		@projects = []
-		@projects << project
+	def initialize(*param)
+                    
+	  @projects = []
+	  if(param.length == 1)
+		  super(param[0])
+	  elsif(param.length>1)
+	    super(param[0])
+	    for i in 1..(param.length-1) 
+        @projects << param[i]
+      end
+      
+		 end  	   
 		self.position = "developer"
 	end
-	
-	def to_string
-		string = "\nProjects| "
-		string = "\nProjects| "
-		@projects.each {|proj| string += "\n\t|-> " + proj}
-		super + string
-	end
-	
-	def add_project(project)
+
+	def add_project(project) 
+	  
 		@projects << project
-	end
+	
+	end   
 	
 end
 

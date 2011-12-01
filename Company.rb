@@ -4,18 +4,15 @@ require 'Trainee'
 
 class Company
   
-  attr_reader :name 
-  attr_accessor :employees
-  
+  attr_reader :name
   
   def initialize(name)
     @name = name;
     @employees = []
   end              
-
    
   def << (employee)
-    employee.company = @name
+    employee.company = self
     @employees << employee  
   end   
    
@@ -27,32 +24,46 @@ class Company
   end
   
   def developers 
-    puts "Developers:"
+    string = "Developers:"
     @employees.each do |emp| 
        if(emp.position.eql?("developer"))
-          puts emp.to_s
+          string += "\n" + emp.name
        end
      end
+     string
   end 
   
   def trainees
-    puts "Trainees:"
+    string = "Trainees:"
     @employees.each do |emp| 
        if(emp.position.eql?("trainee"))
-          (puts emp.to_s + "  " +emp.position )
+          string += "\n" + emp.name
        end
      end
-  end
-  
-   
+     string
+  end   
 end                     
 
-pratuat = Trainee.new("pratuat")
-niroj = Developer.new("niroj", "rvm")                                                             
-company = Company.new("Sprout Technologies")
-company << niroj
-#company.employees << pratuat     
-                  
-puts company.list_employees
-puts niroj.company
-#puts pratuat.company
+pratuat = Developer.new("pratuat","Bizcard Army", "PactRuby")
+niroj = Developer.new("niroj","Bizcard Army","Surehire","CloudFactory", "PactRuby")  
+ashish = Trainee.new("ashish")
+shrey = Trainee.new("shrey")
+                                                           
+sprout = Company.new("Sprout Technologies")
+
+sprout << niroj
+sprout << pratuat
+sprout << ashish
+sprout << shrey
+
+puts sprout.trainees
+puts sprout.developers
+ 
+puts sprout.list_employees
+puts sprout.name
+puts "\n"
+puts niroj.projects 
+puts "\n" 
+puts pratuat.projects 
+
+puts pratuat.company  

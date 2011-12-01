@@ -1,14 +1,17 @@
 
 class Employee
 	
-	attr_accessor :name, :position, :company
+	attr_accessor :position, :company
+	attr_reader :name
 	
 	def initialize(name)
-		self.name = name
+		@name = name 
 	end
 	
-	def to_s
-		"Employee Name: #{self.name}"
-	end
+	def company
+	  @company.name 
+	 end
 
-end
+end   
+
+e=Employee.new("e")
