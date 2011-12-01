@@ -1,6 +1,7 @@
 require 'Employee.rb'
 
-class Developer < Employee 
+class Developer 
+  include Employee 
   
   attr_reader :projects
 
@@ -25,6 +26,8 @@ class Developer < Employee
 	
 	end   
 	
-end
+end  
 
+pratuat = Developer.new("pratuat", "BCA", "CF")
+puts pratuat.projects
 		

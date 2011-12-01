@@ -1,5 +1,5 @@
 
-class Employee
+module Employee
 	
 	attr_accessor :position, :company
 	attr_reader :name
@@ -13,5 +13,3 @@ class Employee
 	 end
 
 end   
-
-e=Employee.new("e")

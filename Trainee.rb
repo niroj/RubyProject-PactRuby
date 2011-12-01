@@ -1,6 +1,7 @@
 require 'Employee.rb'
 
-class Trainee < Employee
+class Trainee
+  include Employee
 
 	attr_reader :name
 	 
