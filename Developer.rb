@@ -6,6 +6,7 @@ class Developer < Employee
 		super(name)
 		@projects = []
 		@projects << project
+		self.position = "developer"
 	end
 	
 	def to_string

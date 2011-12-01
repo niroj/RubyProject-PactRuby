@@ -1,10 +1,10 @@
 
 class Employee
 	
-	attr_accessor :name
+	attr_accessor :name, :position, :company
 	
 	def initialize(name)
-		self.name = name;
+		self.name = name
 	end
 	
 	def to_s
