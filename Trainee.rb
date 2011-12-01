@@ -1,4 +1,4 @@
-require 'C:\Users\User\Desktop\RubyProject\Employee.rb'
+require 'Employee.rb'
 
 class Trainee < Employee
 

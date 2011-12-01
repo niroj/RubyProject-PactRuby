@@ -1,4 +1,4 @@
-require 'C:\Users\User\Desktop\RubyProject\Employee.rb'
+require 'Employee.rb'
 
 class Developer < Employee
 
@@ -21,7 +21,4 @@ class Developer < Employee
 	
 end
 
-pratuat = Developer.new("pratuat","Blackberry BizcardArmy")
-pratuat.add_project("School Calendar")
-puts pratuat.to_string
 		

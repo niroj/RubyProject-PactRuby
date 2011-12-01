@@ -7,7 +7,7 @@ class Employee
 		self.name = name;
 	end
 	
-	def to_string
+	def to_s
 		"Employee Name: #{self.name}"
 	end
 
